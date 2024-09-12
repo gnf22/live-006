@@ -4,8 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/node": "^22.5.4",
+    "prisma": "^5.19.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1"
   }
 }
