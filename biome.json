@@ -13,7 +13,8 @@
 		"enabled": true,
 		"rules": {
 			"suspicious": {
-				"noConfusingVoidType": "off"
+				"noConfusingVoidType": "off",
+				"noNonNullAssertion": "off"
 			},
 			"recommended": true
 		}
