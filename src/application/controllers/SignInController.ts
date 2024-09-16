@@ -1,8 +1,8 @@
 import { z, ZodError } from 'zod';
 
 import type { IController } from '../interfaces/IController';
-import type { IRequest } from '../interfaces/IRequest';
-import type { IResponse } from '../interfaces/IResponse';
+import type { IRequest } from '../interfaces/IController';
+import type { IResponse } from '../interfaces/IController';
 
 import type { SignInUseCase } from '../useCases/SignInUseCase';
 import { InvalidCredentials } from '../errors/InvalidCredentials';
