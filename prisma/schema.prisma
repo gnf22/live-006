@@ -23,3 +23,36 @@ model Account {
 
   @@map("accounts")
 }
+
+enum LeadSource {
+  WEBSITE
+  SOCIAL_MEDIA
+  EVENT
+  REFERRAL
+  OTHER
+
+  @@map("source")
+}
+
+enum LeadStatus {
+  NEW
+  IN_CONTACT
+  QUALIFIED
+  PROPOSAL_SENT
+  CLOSED
+  LOST
+
+  @@map("status")
+}
+
+model Lead {
+  id        String      @id @default(uuid()) @db.Uuid
+  name      String
+  email     String      @unique
+  phone     String?
+  source    LeadSource?
+  status    LeadStatus  @default(NEW)
+  createdAt DateTime    @default(now()) @map("created_at")
+
+  @@map("leads")
+}
