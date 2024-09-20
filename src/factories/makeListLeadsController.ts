@@ -1,5 +1,7 @@
 import { ListLeadsController } from '../application/controllers/ListLeadsController';
+import { makeListLeadsUseCase } from './makeListLeadsUseCase';
 
 export function makeListLeadsController() {
-	return new ListLeadsController();
+	const listLeadsUseCase = makeListLeadsUseCase();
+	return new ListLeadsController(listLeadsUseCase);
 }

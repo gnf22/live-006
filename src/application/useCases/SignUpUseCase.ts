@@ -1,7 +1,7 @@
 import { hash } from 'bcryptjs';
 import { prismaClient } from '../libs/prsimaClient';
 import { AccountAlreadyExists } from '../errors/AccountAlreadyExists';
-import type { Role } from '@prisma/client';
+import type { Role } from '../enums/Role';
 
 interface IInput {
 	name: string;
