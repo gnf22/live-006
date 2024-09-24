@@ -1,10 +1,7 @@
 import { optional, z, ZodError } from 'zod';
 
-import type {
-	IController,
-	IRequest,
-	IResponse,
-} from '../interfaces/IController';
+import type { IController, IResponse } from '../interfaces/IController';
+import type { IRequest } from '../interfaces/IRequest';
 
 import type { CreateLeadUseCase } from '../useCases/CreateLeadUseCase';
 import { LeadAlreadyExists } from '../errors/LeadAlreadyExists';

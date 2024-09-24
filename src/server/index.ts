@@ -9,6 +9,7 @@ import { makeListLeadsController } from '../factories/makeListLeadsController';
 import { makeAuthenticationMiddleware } from '../factories/makeAuthenticationMiddleware';
 import { makeGetLeadByIdController } from '../factories/makeGetLeadByIdController';
 import { makeCreateLeadController } from '../factories/makeCreateLeadController';
+import { makeAuthorizationMiddleware } from '../factories/makeAuthorizationMiddleware';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.post('/sign-in', routeAdapter(makeSignInController()));
 app.post(
 	'/leads',
 	middlewareAdapter(makeAuthenticationMiddleware()),
+	middlewareAdapter(makeAuthorizationMiddleware(['ADMIN'])),
 	routeAdapter(makeCreateLeadController()),
 );
 
