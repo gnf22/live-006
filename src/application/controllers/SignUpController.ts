@@ -16,7 +16,6 @@ export class SignUpController implements IController {
 	constructor(private readonly signUpUseCase: SignUpUseCase) {}
 
 	async handle({ body }: IRequest): Promise<IResponse> {
-		console.log(body);
 		try {
 			const { name, email, password } = schema.parse(body);
 
