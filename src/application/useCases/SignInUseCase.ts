@@ -1,6 +1,6 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
-import { prismaClient } from '../libs/prsimaClient';
+import { prismaClient } from '../libs/prismaClient';
 import { InvalidCredentials } from '../errors/InvalidCredentials';
 import { env } from '../config/env';
 

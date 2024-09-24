@@ -1,4 +1,4 @@
-import { prismaClient } from '../libs/prsimaClient';
+import { prismaClient } from '../libs/prismaClient';
 import type { LeadSource } from '../enums/LeadSource';
 import type { LeadStatus } from '../enums/LeadStatus';
 

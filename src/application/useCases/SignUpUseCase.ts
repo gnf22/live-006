@@ -1,5 +1,5 @@
 import { hash } from 'bcryptjs';
-import { prismaClient } from '../libs/prsimaClient';
+import { prismaClient } from '../libs/prismaClient';
 import { AccountAlreadyExists } from '../errors/AccountAlreadyExists';
 import type { Role } from '../enums/Role';
 
