@@ -12,13 +12,14 @@ const leadRouter = Router();
 leadRouter.post(
 	'/leads',
 	middlewareAdapter(makeAuthenticationMiddleware()),
-	middlewareAdapter(makeAuthorizationMiddleware(['ADMIN'])),
+	middlewareAdapter(makeAuthorizationMiddleware(['leads:write'])),
 	routeAdapter(makeCreateLeadController()),
 );
 
 leadRouter.get(
 	'/leads',
 	middlewareAdapter(makeAuthenticationMiddleware()),
+	middlewareAdapter(makeAuthorizationMiddleware(['leads:read'])),
 	routeAdapter(makeListLeadsController()),
 );
 
